@@ -1,5 +1,6 @@
-import MainPage from './components/MainPage'
-import Home from './components/Home'
+import MainPage from './components/MainPage';
+import Home from './components/Home';
+import './App.css';
 
 function App() {
   return (
