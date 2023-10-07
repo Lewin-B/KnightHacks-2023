@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Home.css';
+import Login from './Popups/Login';
 
 function Home() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+      setShow(false);
+  }
+
+
   return (
     <div className="App">
       <div className="text-header">
@@ -22,7 +30,8 @@ function Home() {
 
         <div className="button-container">
           <button className="signup-button">Sign up</button>
-          <button className="login-button">Login</button>
+          <button className="login-button" onClick={() => setShow(true)}>Login</button>
+          <Login trigger={show} onClose={handleClose} />
       </div>
       </nav>
     </div>
