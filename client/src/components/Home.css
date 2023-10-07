@@ -1,0 +1,66 @@
+body {
+  background-color: lightgray;
+}
+
+.signup-button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+  margin-right: 20px; /* Add margin to create space */
+  font-weight: 200;
+}
+
+.login-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-top: 250px;
+  font-weight: 200;
+}
+
+.statement {
+  color: black;
+  text-align: center;
+  font-size: 22px;
+  max-width: 1300px;
+  font-weight: 600;
+  background-color: white;
+  border: 5px solid black;
+}
+
+.logo {
+  color: black;
+  font-size: 30px;
+  border: 5px solid black;
+}
+
+.text-header {
+  color: white;
+  text-align: center; /* Center-align the buttons horizontally */
+  background-color: black;
+  padding-block: 10px;
+  margin-bottom: 90px;
+  font-size: 24px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+.signup-button:hover {
+  background-color: gray;
+}
+
+.login-button:hover {
+  background-color: gray;
+}
+
+.button-container {
+  text-align: center; /* Center-align the buttons horizontally */
+  margin-top: auto; /* Push the container to the bottom */
+  padding: 20px; /* Optional padding for spacing */
+}
