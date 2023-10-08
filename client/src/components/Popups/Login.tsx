@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 type LoginProps = {
@@ -23,7 +23,7 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
     setFormData((formData) => ({ ...formData, [name]: value}));
   }
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Login handler
   const HandleLogin = async (e: React.ChangeEvent<any>) => {
@@ -50,8 +50,8 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
         });
         onClose();
 
-        // Navigate to Twitter homescreen
-        //navigate('/MainPage');
+        //Navigate to Twitter homescreen
+        navigate('/MainPage');
 
       } else {
         setMessage(data.message);
