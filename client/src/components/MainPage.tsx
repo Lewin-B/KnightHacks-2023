@@ -18,9 +18,25 @@ const MainPage = () => {
 
 
   useEffect(() => {
-    fetch("/chat")
+    // Fetch chat data from the API
+    fetch("/chat", {
+      headers: {
+        method: 'GET',
+        'Content-Type': 'application/json',
+      },
+    })
       .then((res) => res.json())
-      .then((data) => console.log(data)); // do something with data)
+      .then((data) => {
+        // Create a message object from the API data and add it to the messages state
+        const botMessage = {
+          text: data.message, // Assuming the API response has a 'message' field
+          sender: "Bot: ",
+        };
+        setMessages([...messages, botMessage]);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   }, []);
 
   //input handlers
@@ -33,6 +49,11 @@ const MainPage = () => {
 
     setInput("");
   };
+
+  const handleBotMessage = () => {
+    //Add bot message to messages array
+    
+  }
   const headerStyle = {
     backgroundColor: "#2d2d2a",
     color: "white",
@@ -126,7 +147,7 @@ const MainPage = () => {
     transition: "background-color 0.2s",
     width: "10%",
     paddingtop: "10px",
-
+  }
     
     return(
         <>
