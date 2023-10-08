@@ -43,7 +43,7 @@ body {
 .text-header {
   color: white;
   text-align: center; /* Center-align the buttons horizontally */
-  background-color: black;
+  background-color: #2d2d2a;
   padding-block: 10px;
   margin-bottom: 90px;
   font-size: 24px;

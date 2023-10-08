@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import './Home.css';
 import Login from './Popups/Login';
-
+import '@fontsource/roboto'
+import secretary from './secretary.png'
+import plus from './plus.png'
+import Ai from './ai.png'
 function Home() {
   const [show, setShow] = useState(false);
 
@@ -13,17 +16,19 @@ function Home() {
   return (
     <div className="App">
       <div className="text-header">
-        <h1>- BriefCase.ai -</h1>
+        <h1 style={{fontFamily: 'Roboto'}}>- BriefCase.ai -</h1>
       </div>
       <nav>
-      <div style={{ display: 'flex', justifyContent: 'space-around', height: '200px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-around', height: '200px', fontFamily:'Roboto'}}>
 
-          <div className="logo" style={{ height: '300px', width: '300px', backgroundColor: 'white' }}>
-            <p style={{ marginLeft: 110, marginTop: 110}}>Logo</p>
+          <div className="logo" style={{ height: '300px', width: '300px', backgroundColor: 'white', paddingTop: '60px'}}>
+            <img src = {secretary} style={{width: '125px', height: 'auto', display:'inline'}}/>
+            <img src = {plus} style = {{width: '40px', height: 'auto', display:'inline'}}/>
+            <img src= {Ai} style={{width: '125px', height: 'auto', display: 'inline'}}/>
           </div>
           <div className="statement" style={{ height: '300px', width: '300px', backgroundColor: 'white' }}>
-            <p style={{ marginTop: 45}}>Need information about a case such as its name, 
-            keywords, or relevant details? BriefCase will retrieve the relevant information for you.</p>
+            <h2 style={{fontSize: '25px'}}>Misson Statement:</h2>
+            <p style = {{fontSize: '16px', paddingTop: '40px', paddingInline: '5px'}}>At BriefCase.ai, we're on a mission to simplify legal information. Our React chatbot provides quick, accurate answers to common legal questions, empowering individuals to make informed decisions with ease. We're dedicated to making legal knowledge accessible and user-friendly for all.</p>
           </div>
 
         </div>
