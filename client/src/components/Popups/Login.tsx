@@ -46,7 +46,7 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
         console.log(data.message);
         setFormData({
           email: '',
-          password: ''
+          password: '',
         });
         onClose();
 

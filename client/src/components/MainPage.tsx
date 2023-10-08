@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import headerImg from "../OIP (1).jpeg";
 import { useState } from "react";
-import "@fontsource/roboto";
-import logo from "./mainpagelogo.png";
+import '@fontsource/roboto'
+import logo from './mainpagelogo.png'
 
 const MainPage = () => {
   type Message = {
@@ -48,23 +48,23 @@ const MainPage = () => {
     alignItems: "center",
   };
 
-  const navBtnStyles = {
-    padding: "10px",
-    backgroundColor: "#e5dcc5",
-    color: "black",
-    borderRadius: "5px",
-    borderColor: "#e5dcc5",
-    borderWidth: "2px",
-    margin: "2px",
-  };
-
-  const titleStyles = {
-    fontSize: "30px",
-    textalign: "center",
-    marginLeft: "80px",
-    color: "white",
-    fontFamily: "Roboto",
-  };
+    const navBtnStyles = {
+        padding: '10px',
+        backgroundColor: '#e5dcc5',
+        color: 'black',
+        borderRadius: '5px',
+        borderColor: '#e5dcc5',
+        borderWidth: '2px',
+        margin: '2px'
+    }
+    
+    const titleStyles = {
+        fontSize: '30px',
+        textalign: 'center',
+        marginLeft: '80px',
+        color: 'white',
+        fontFamily: 'Roboto'
+    }
 
   const imgContainerStyle = {
     width: "50px",
@@ -127,26 +127,18 @@ const MainPage = () => {
     width: "10%",
     paddingtop: "10px",
 
-    "&:hover": {
-      backgroundColor: "#0039cb",
-    },
-  };
-
-  return (
-    <>
-      <div className="header" style={headerStyle}>
-        <div className="header-img" style={imgContainerStyle}>
-          <img src={logo} style={{ borderRadius: "10px" }} />
+    
+    return(
+        <>
+        <div className ='header' style = {headerStyle}>
+            <div className = 'header-img' style={imgContainerStyle}>
+                <img src = {logo} style={{borderRadius: '10px'}}  />
+            </div>
+            <h1 className = 'titleText' style = {titleStyles}>- BriefCase.ai -</h1>
+            <div className = 'nav' style={navStyles}>
+                <button className = 'nav-btn' style = {navBtnStyles}>More Resources</button>
+            </div>
         </div>
-        <h1 className="titleText" style={titleStyles}>
-          - BriefCase.ai -
-        </h1>
-        <div className="nav" style={navStyles}>
-          <button className="nav-btn" style={navBtnStyles}>
-            More Resources
-          </button>
-        </div>
-      </div>
 
       <main style={mainStyles}>
         <div className="main-portion">
