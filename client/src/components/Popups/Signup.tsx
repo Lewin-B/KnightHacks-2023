@@ -134,7 +134,7 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
         <input
           name='clientName'
           value={formData.clientName}
-          className='text-white rounded-sm p-2 bg-black mb-3 ml-[-300px] mt-[10px]'
+          className='text-white rounded-sm p-2 bg-black mb-3 ml-[-300px] mt-[5px]'
           type="text"
           placeholder='Client Name'
           onChange={handleChange}
