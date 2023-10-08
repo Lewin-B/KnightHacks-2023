@@ -206,7 +206,7 @@ const promptBot = () => {
               </div>
               <p style={{color: 'red', paddingTop: '5px'}}>Please Read</p>
               <p style={paragraphStyle}>
-                Welcome to BriefCase Our AI chatbot is here to provide you with
+                Welcome to LawgicBot Our AI chatbot is here to provide you with
                 information and guidance related to legal cases. Please keep in
                 mind that the information provided by the chatbot is for
                 informational purposes only and should not be considered a
