@@ -50,8 +50,8 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
         });
         onClose();
 
-        //Navigate to homescreen
-        navigate('/MainPage');
+        //Navigate to main screen
+        navigate('/main');
 
       } else {
         setMessage(data.message);

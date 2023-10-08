@@ -23,13 +23,15 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
     setFormData((formData) => ({ ...formData, [name]: value}));
   }
 
+  const [response, setResponse] = useState('')
+
   const navigate = useNavigate();
 
   // Login handler
   const handleLogin = async (e: React.ChangeEvent<any>) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:9000/login', {
+      const response = await fetch('/signup', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
@@ -51,6 +53,7 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
         onClose();
 
         //Navigate to main
+
         navigate('/main');
 
       } else {
