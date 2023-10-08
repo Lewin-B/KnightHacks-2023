@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Home.css';
 import Login from './Popups/Login';
+import Signup from './Popups/Signup';
 import '@fontsource/roboto'
 import secretary from './secretary.png'
 import plus from './plus.png'
@@ -10,6 +11,12 @@ function Home() {
 
   const handleClose = () => {
       setShow(false);
+  }
+
+  const [showsu, setShowsu] = useState(false);
+
+  const handleCloseSU = () => {
+      setShowsu(false);
   }
 
 
@@ -34,7 +41,8 @@ function Home() {
         </div>
 
         <div className="button-container">
-          <button className="signup-button">Sign up</button>
+          <button className="signup-button" onClick={() => setShowsu(true)}>Sign up</button>
+          <Signup trigger={showsu} onClose={handleCloseSU} />
           <button className="login-button" onClick={() => setShow(true)}>Login</button>
           <Login trigger={show} onClose={handleClose} />
       </div>
