@@ -23,7 +23,7 @@ function Home() {
   return (
     <div className="App">
       <div className="text-header">
-        <h1 style={{fontFamily: 'Roboto'}}>- LawgicBot -</h1>
+        <h1 style={{fontFamily: 'Roboto', fontSize: '30px'}}>- LawgicBot -</h1>
       </div>
       <nav>
       <div style={{ display: 'flex', justifyContent: 'space-around', height: '200px', fontFamily:'Roboto'}}>
