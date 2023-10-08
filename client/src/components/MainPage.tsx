@@ -1,7 +1,9 @@
 import React from "react";
-import headerImg from './OIP (1).jpeg'
+import headerImg from '../OIP (1).jpeg'
 import { useState } from "react";
-import './App.css'
+import '@fontsource/roboto'
+import logo from './mainpagelogo.png'
+
 
 const MainPage = () =>{
     type Message = {
@@ -22,7 +24,7 @@ const MainPage = () =>{
         setInput('')
     }
     const headerStyle = {
-        backgroundColor: '#4c4c47',
+        backgroundColor: '#2d2d2a',
         color: 'white',
         padding: '10px',
         display: 'flex',
@@ -38,10 +40,10 @@ const MainPage = () =>{
 
     const navBtnStyles = {
         padding: '10px',
-        backgroundColor: '#848fa5',
+        backgroundColor: '#e5dcc5',
         color: 'black',
         borderRadius: '5px',
-        borderColor: 'blue',
+        borderColor: '#e5dcc5',
         borderWidth: '2px',
         margin: '2px'
     }
@@ -50,7 +52,8 @@ const MainPage = () =>{
         fontSize: '30px',
         textalign: 'center',
         marginLeft: '80px',
-        color: '#e5dcc5'
+        color: 'white',
+        fontFamily: 'Roboto'
     }
 
     const imgContainerStyle = {
@@ -68,12 +71,15 @@ const MainPage = () =>{
         alignItems: 'center',
         color: 'white',
         textalign: 'center',
+        backgroundColor:'white'
     }
     const paragraphStyle: React.CSSProperties = {
         paddingInline: '30px',
         paddingBlock: '10px',
         textAlign: 'center',
-        lineHeight: '30px'
+        lineHeight: '30px',
+        fontFamily: 'Roboto',
+        color: 'black',
     }
 
     const chatContainerStyles = {
@@ -85,12 +91,15 @@ const MainPage = () =>{
         borderwidth: '2px',
         padding: '5px',
         minHeight: '530px',
-        backgroundColor: '#e5dcc5'
-
+        backgroundColor: 'rgb(211,211,211)',
+        border: '2px solid black',
+        margintop: '5px',
+        marginInline: '5px',
+        marginBottom: '5px'
     }
 
     const inputStyles = {
-        border: '2px solid blue',
+        border: '2px solid #e5dcc5',
         width: '89%',
         paddingLeft: '5px',
         marginRight: '4px'
@@ -98,15 +107,15 @@ const MainPage = () =>{
 
     const sendButtonStyles = {
         padding: '5px',
-        backgroundColor: '#848fa5',
+        backgroundColor: '#e5dcc5',
         color: 'black',
         borderRadius: '5px',
-        borderColor: 'blue',
+        borderColor: '#e5dcc5',
         borderWidth: '2px',
         margin: '2px',
         transition: 'background-color 0.2s',
         width: '10%',
-        paddingtop: '10px' ,
+        paddingtop: '10px',
       
         '&:hover': {
           backgroundColor: '#0039cb' 
@@ -119,9 +128,9 @@ const MainPage = () =>{
         <>
         <div className ='header' style = {headerStyle}>
             <div className = 'header-img' style={imgContainerStyle}>
-                <img src = {headerImg}  />
+                <img src = {logo} style={{borderRadius: '10px'}}  />
             </div>
-            <h1 className = 'titleText' style = {titleStyles}>BriefCase.ai</h1>
+            <h1 className = 'titleText' style = {titleStyles}>- BriefCase.ai -</h1>
             <div className = 'nav' style={navStyles}>
                 <button className = 'nav-btn' style = {navBtnStyles}>More Resources</button>
             </div>
@@ -160,4 +169,4 @@ const MainPage = () =>{
     )
 }
 
-export default MainPage
+export default MainPage;
