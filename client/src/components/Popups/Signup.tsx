@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 type signupProps = {
@@ -50,8 +50,9 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
         });
         onClose();
 
-        // Navigate to Twitter homescreen
-        //navigate('/MainPage');
+        const navigate = useNavigate();
+        //Navigate to main
+        navigate('/main');
 
       } else {
         setMessage(data.message);

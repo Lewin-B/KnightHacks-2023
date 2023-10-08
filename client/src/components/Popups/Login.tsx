@@ -29,7 +29,7 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
   const handleLogin = async (e: React.ChangeEvent<any>) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:9000/login', {
+      const response = await fetch('/login', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
@@ -70,7 +70,7 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
         <form className='flex flex-col items-center' onSubmit={handleLogin}>
           <input name='email' value={formData.email} className='text-white rounded-sm p-2 bg-black' type="text" placeholder='Email' onChange={handleChange} />
           <p className='p-3'></p>
-          <input name='password' value={formData.password} className='rounded-sm p-2 bg-black' type="password" placeholder='Password' onChange={handleChange} />
+          <input name='password' value={formData.password} className='rounded-sm p-2 text-white bg-black' type="password" placeholder='Password' onChange={handleChange} />
           <p className='p-7'></p>
           {message ? <div className='text-red-500 text-center text-md'>{message}</div> : null}
           <button className='bg-white text-black font-bold rounded-full w-[300px] p-3 '>Log In</button>
