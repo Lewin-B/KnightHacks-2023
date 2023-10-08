@@ -204,6 +204,7 @@ const promptBot = () => {
                   Instructions
                 </h1>
               </div>
+              <p style={{color: 'red', paddingTop: '5px'}}>Please Read</p>
               <p style={paragraphStyle}>
                 Welcome to BriefCase Our AI chatbot is here to provide you with
                 information and guidance related to legal cases. Please keep in
