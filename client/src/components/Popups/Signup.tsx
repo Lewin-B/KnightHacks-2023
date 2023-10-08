@@ -13,8 +13,6 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    caseId: '',
-    caseNumber: '',
     caseDate: '',
     caseRepresentative: '',
     clientName: '',
@@ -56,8 +54,6 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
         setFormData({
           email: '',
           password: '',
-          caseId: '',
-          caseNumber: '',
           caseDate: '',
           caseRepresentative: '',
           clientName: '',
@@ -102,22 +98,6 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
           onChange={handleChange}
         />
         {/* Add the new input fields here */}
-        <input
-          name='caseId'
-          value={formData.caseId}
-          className='text-white rounded-sm p-2 bg-black ml-[-300px]'
-          type="text"
-          placeholder='Case ID'
-          onChange={handleChange}
-        />
-        <input
-          name='caseNumber'
-          value={formData.caseNumber}
-          className='text-white rounded-sm p-2 bg-black mb-3 ml-[300px] mt-[-40px]'
-          type="text"
-          placeholder='Case Number'
-          onChange={handleChange}
-        />
         <input
           name='caseDate'
           value={formData.caseDate}

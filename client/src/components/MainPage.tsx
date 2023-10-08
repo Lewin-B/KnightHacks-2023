@@ -4,6 +4,7 @@ import { useState } from "react";
 import '@fontsource/roboto'
 import logo from './mainpagelogo.png'
 import { json } from "stream/consumers";
+import {useNavigate} from 'react-router-dom';
 
 const MainPage = () => {
   type Message = {
@@ -11,7 +12,7 @@ const MainPage = () => {
     sender: string;
   };
 
-  
+  const navigate = useNavigate()
 
   //State variables
   const [messages, setMessages] = useState<Message[]>([]);
@@ -74,6 +75,11 @@ const promptBot = () => {
         console.error('Error:', error);
     });
 }
+  const logout = () => {
+    fetch('/logout').then((res) => {
+        navigate('/')
+    })
+  }  
   const headerStyle = {
     backgroundColor: "#2d2d2a",
     color: "white",
@@ -175,9 +181,9 @@ const promptBot = () => {
             <div className = 'header-img' style={imgContainerStyle}>
                 <img src = {logo} style={{borderRadius: '10px'}}  />
             </div>
-            <h1 className = 'titleText' style = {titleStyles}>- BriefCase.ai -</h1>
+            <h1 className = 'titleText' style = {titleStyles}>- LawgicBot -</h1>
             <div className = 'nav' style={navStyles}>
-                <button className = 'nav-btn' style = {navBtnStyles}>More Resources</button>
+                <button className = 'nav-btn' onClick={logout} style = {navBtnStyles}>Logout</button>
             </div>
         </div>
 
@@ -214,7 +220,7 @@ const promptBot = () => {
         </div>
 
         <div className="chat-container" style={chatContainerStyles}>
-          <div className="boxed-container" style={boxedStyles}>
+          <div className="boxed-container overflow-y-scroll" style={boxedStyles}>
             <div>
               {messages.map((message, index) => (
                 <div key={index}>
