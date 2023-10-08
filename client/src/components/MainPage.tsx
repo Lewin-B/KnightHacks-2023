@@ -3,6 +3,7 @@ import headerImg from "../OIP (1).jpeg";
 import { useState } from "react";
 import '@fontsource/roboto'
 import logo from './mainpagelogo.png'
+import { json } from "stream/consumers";
 
 const MainPage = () => {
   type Message = {
@@ -15,6 +16,7 @@ const MainPage = () => {
   //State variables
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
+  const [prompt, setPrompt] = useState("");
 
 
   useEffect(() => {
@@ -41,6 +43,7 @@ const MainPage = () => {
 
   //input handlers
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPrompt(event.target.value);
     setInput(event.target.value);
   };
   const handleSendMessage = () => {
@@ -50,10 +53,27 @@ const MainPage = () => {
     setInput("");
   };
 
-  const handleBotMessage = () => {
-    //Add bot message to messages array
-    
-  }
+const promptBot = () => {
+    fetch('/prompt', {
+        method: 'POST',
+        body: JSON.stringify({'message': prompt}),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        // Create a message object from the API data and add it to the messages state
+        const botMessage = {
+            text: data.message, // Assuming the API response has a 'message' field
+            sender: "Bot: ",
+        };
+        setMessages([...messages, botMessage]);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
   const headerStyle = {
     backgroundColor: "#2d2d2a",
     color: "white",
@@ -219,7 +239,7 @@ const MainPage = () => {
               onChange={handleInputChange}
               placeholder="Ask your legal question"
             />
-            <button style={sendButtonStyles} onClick={handleSendMessage}>
+            <button style={sendButtonStyles} onClick={() => { handleSendMessage(); promptBot(); }}>
               Send
             </button>
           </div>
