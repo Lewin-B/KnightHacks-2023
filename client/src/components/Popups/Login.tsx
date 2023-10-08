@@ -50,7 +50,7 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
         });
         onClose();
 
-        //Navigate to Twitter homescreen
+        //Navigate to homescreen
         navigate('/MainPage');
 
       } else {

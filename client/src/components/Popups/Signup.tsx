@@ -23,7 +23,7 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
     setFormData((formData) => ({ ...formData, [name]: value}));
   }
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Login handler
   const handleLogin = async (e: React.ChangeEvent<any>) => {
@@ -50,7 +50,6 @@ const Signup: React.FC<signupProps> = ({ trigger, onClose }) => {
         });
         onClose();
 
-        const navigate = useNavigate();
         //Navigate to main
         navigate('/main');
 
