@@ -3,6 +3,7 @@ import headerImg from '../OIP (1).jpeg'
 import { useState } from "react";
 import '@fontsource/roboto'
 import logo from './mainpagelogo.png'
+import {useNavigate} from 'react-router-dom'
 
 
 const MainPage = () =>{
@@ -51,7 +52,7 @@ const MainPage = () =>{
     const titleStyles = {
         fontSize: '30px',
         textalign: 'center',
-        marginLeft: '80px',
+        marginLeft: '40px',
         color: 'white',
         fontFamily: 'Roboto'
     }
@@ -130,9 +131,10 @@ const MainPage = () =>{
             <div className = 'header-img' style={imgContainerStyle}>
                 <img src = {logo} style={{borderRadius: '10px'}}  />
             </div>
-            <h1 className = 'titleText' style = {titleStyles}>- BriefCase.ai -</h1>
+            <h1 className = 'titleText' style = {titleStyles}>- LawgicBot -</h1>
             <div className = 'nav' style={navStyles}>
-                <button className = 'nav-btn' style = {navBtnStyles}>More Resources</button>
+                <button className = 'nav-btn' style = {navBtnStyles}>Log Out</button>
+
             </div>
         </div>
 

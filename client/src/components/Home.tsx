@@ -23,19 +23,19 @@ function Home() {
   return (
     <div className="App">
       <div className="text-header">
-        <h1 style={{fontFamily: 'Roboto'}}>- BriefCase.ai -</h1>
+        <h1 style={{fontFamily: 'Roboto'}}>- LawgicBot -</h1>
       </div>
       <nav>
       <div style={{ display: 'flex', justifyContent: 'space-around', height: '200px', fontFamily:'Roboto'}}>
 
-          <div className="logo" style={{ height: '300px', width: '300px', borderRadius: '5px', backgroundColor: 'white', paddingTop: '60px'}}>
-            <img src = {secretary} style={{width: '125px', height: 'auto', display:'inline'}}/>
-            <img src = {plus} style = {{width: '40px', height: 'auto', display:'inline'}}/>
+          <div className="logo" style={{ height: '300px', width: '300px', backgroundColor: 'white', paddingTop: '60px'}}>
+            <img src = {secretary} style={{width: '125px', height: 'auto', display:'inline', padding: '-10px'}}/>
+            <img src = {plus} style = {{width: '40px', height: 'auto', display:'inline', paddingRight: '10px'}}/>
             <img src= {Ai} style={{width: '125px', height: 'auto', display: 'inline'}}/>
           </div>
           <div className="statement" style={{ height: '300px', width: '300px', borderRadius: '5px', backgroundColor: 'white' }}>
             <h2 style={{fontSize: '25px'}}>Misson Statement:</h2>
-            <p style = {{fontSize: '16px', paddingTop: '40px', paddingInline: '5px'}}>At BriefCase.ai, we're on a mission to simplify legal information. Our React chatbot provides quick, accurate answers to common legal questions, empowering individuals to make informed decisions with ease. We're dedicated to making legal knowledge accessible and user-friendly for all.</p>
+            <p style = {{fontSize: '16px', paddingTop: '30px', paddingInline: '5px'}}>At Juris Tech, we're on a mission to simplify legal information with our latest AI software, LawgicBot. LawgicBot provides quick, accurate answers to common legal questions, empowering individuals to make informed decisions with ease. We're dedicated to making legal knowledge accessible and user-friendly for all.</p>
           </div>
 
         </div>
