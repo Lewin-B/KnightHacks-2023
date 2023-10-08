@@ -26,7 +26,7 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
   //const navigate = useNavigate();
 
   // Login handler
-  const handleLogin = async (e: React.ChangeEvent<any>) => {
+  const HandleLogin = async (e: React.ChangeEvent<any>) => {
     e.preventDefault();
     try {
       const response = await fetch('/login', {
@@ -67,7 +67,7 @@ const Login: React.FC<LoginProps> = ({ trigger, onClose }) => {
       <div className="fixed inset-0 bg-black opacity-50" onClick={onClose}></div>
       <div className="bg-black p-8 rounded-lg shadow-lg z-10 w-96 flex flex-col justify-center items-center">
         <p className='font-bold text-white pt-8 text-2xl pb-5'>Log In</p>
-        <form className='flex flex-col items-center' onSubmit={handleLogin}>
+        <form className='flex flex-col items-center' onSubmit={HandleLogin}>
           <input name='email' value={formData.email} className='text-white rounded-sm p-2 bg-black' type="text" placeholder='Email' onChange={handleChange} />
           <p className='p-3'></p>
           <input name='password' value={formData.password} className='rounded-sm p-2 text-white bg-black' type="password" placeholder='Password' onChange={handleChange} />
