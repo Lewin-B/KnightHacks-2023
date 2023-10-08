@@ -28,12 +28,12 @@ function Home() {
       <nav>
       <div style={{ display: 'flex', justifyContent: 'space-around', height: '200px', fontFamily:'Roboto'}}>
 
-          <div className="logo" style={{ height: '300px', width: '300px', backgroundColor: 'white', paddingTop: '60px'}}>
+          <div className="logo" style={{ height: '300px', width: '300px', borderRadius: '5px', backgroundColor: 'white', paddingTop: '60px'}}>
             <img src = {secretary} style={{width: '125px', height: 'auto', display:'inline'}}/>
             <img src = {plus} style = {{width: '40px', height: 'auto', display:'inline'}}/>
             <img src= {Ai} style={{width: '125px', height: 'auto', display: 'inline'}}/>
           </div>
-          <div className="statement" style={{ height: '300px', width: '300px', backgroundColor: 'white' }}>
+          <div className="statement" style={{ height: '300px', width: '300px', borderRadius: '5px', backgroundColor: 'white' }}>
             <h2 style={{fontSize: '25px'}}>Misson Statement:</h2>
             <p style = {{fontSize: '16px', paddingTop: '40px', paddingInline: '5px'}}>At BriefCase.ai, we're on a mission to simplify legal information. Our React chatbot provides quick, accurate answers to common legal questions, empowering individuals to make informed decisions with ease. We're dedicated to making legal knowledge accessible and user-friendly for all.</p>
           </div>
